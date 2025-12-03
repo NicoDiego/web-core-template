@@ -1,0 +1,86 @@
+/* core.theme.vars.css
+ * Token di design + gestione tema chiaro / scuro
+ */
+
+:root {
+  color-scheme: light dark;
+
+  /* Palette base */
+  --sc-color-bg: #ffffff;
+  --sc-color-bg-soft: #f9fafb;
+  --sc-color-text: #111827;
+  --sc-color-heading: #0f172a;
+  --sc-color-primary: #0f766e;
+  --sc-color-primary-soft: #ccfbf1;
+  --sc-color-border: #e5e7eb;
+  --sc-color-muted: #6b7280;
+  --sc-color-danger: #b91c1c;
+  --sc-color-success: #15803d;
+  --sc-color-warning: #b45309;
+
+  /* Superfici */
+  --sc-color-surface: #ffffff;
+  --sc-color-surface-alt: #f3f4f6;
+
+  /* Radius */
+  --sc-radius-sm: 0.25rem;
+  --sc-radius-md: 0.5rem;
+  --sc-radius-lg: 0.75rem;
+  --sc-radius-xl: 1rem;
+  --sc-radius-full: 9999px;
+
+  /* Ombre */
+  --sc-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --sc-shadow-md: 0 10px 15px rgba(15, 23, 42, 0.08);
+  --sc-shadow-lg: 0 20px 25px rgba(15, 23, 42, 0.12);
+
+  /* Spaziatura */
+  --sc-space-1: 0.25rem;
+  --sc-space-2: 0.5rem;
+  --sc-space-3: 0.75rem;
+  --sc-space-4: 1rem;
+  --sc-space-5: 1.25rem;
+  --sc-space-6: 1.5rem;
+  --sc-space-8: 2rem;
+  --sc-space-10: 2.5rem;
+
+  /* Larghezza contenuto */
+  --sc-max-width: 1120px;
+}
+
+/* Modalità automatica: il JS setta data-theme="auto" + data-theme-mode="light/dark" */
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --sc-color-bg: #020617;
+    --sc-color-bg-soft: #020617;
+    --sc-color-text: #e5e7eb;
+    --sc-color-heading: #f9fafb;
+    --sc-color-primary: #22d3ee;
+    --sc-color-primary-soft: #0f172a;
+    --sc-color-border: #1f2937;
+    --sc-color-muted: #9ca3af;
+    --sc-color-surface: #020617;
+    --sc-color-surface-alt: #020617;
+  }
+}
+
+/* Tema chiaro forzato */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+/* Tema scuro forzato */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --sc-color-bg: #020617;
+  --sc-color-bg-soft: #020617;
+  --sc-color-text: #e5e7eb;
+  --sc-color-heading: #f9fafb;
+  --sc-color-primary: #22d3ee;
+  --sc-color-primary-soft: #0f172a;
+  --sc-color-border: #1f2937;
+  --sc-color-muted: #9ca3af;
+  --sc-color-surface: #020617;
+  --sc-color-surface-alt: #020617;
+}

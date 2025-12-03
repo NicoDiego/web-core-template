@@ -1,0 +1,141 @@
+/* core.base.css
+ * Reset leggero + tipografia + elementi base
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+  background-color: var(--sc-color-bg);
+  color: var(--sc-color-text);
+}
+
+/* Titoli e testo */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--sc-color-heading);
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+ul, ol {
+  padding-left: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+/* Link */
+a {
+  color: var(--sc-color-primary);
+  text-decoration: none;
+}
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+/* Immagini */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Tabelle base */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+}
+th, td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--sc-color-border);
+}
+th {
+  text-align: left;
+  background-color: var(--sc-color-surface-alt);
+}
+
+/* Form base */
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+.sc-field,
+.sc-select,
+.sc-textarea {
+  width: 100%;
+  border-radius: var(--sc-radius-md);
+  border: 1px solid var(--sc-color-border);
+  padding: 0.5rem 0.75rem;
+  background-color: var(--sc-color-surface);
+  color: var(--sc-color-text);
+}
+.sc-field:focus-visible,
+.sc-select:focus-visible,
+.sc-textarea:focus-visible {
+  outline: 2px solid var(--sc-color-primary);
+  outline-offset: 2px;
+  border-color: var(--sc-color-primary);
+}
+
+.sc-field-label {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.sc-field-help {
+  font-size: 0.8rem;
+  color: var(--sc-color-muted);
+  margin-top: 0.25rem;
+}
+
+/* Skip link accessibilità */
+.sc-skip-link {
+  position: absolute;
+  left: -999px;
+  padding: 0.5rem 1rem;
+  background: var(--sc-color-primary);
+  color: #ffffff;
+  border-radius: var(--sc-radius-md);
+  z-index: 1000;
+}
+.sc-skip-link:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+}
+
+/* Layout base body */
+.sc-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.sc-main {
+  flex: 1 0 auto;
+}
+.sc-footer {
+  flex-shrink: 0;
+}

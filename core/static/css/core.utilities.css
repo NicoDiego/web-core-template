@@ -1,0 +1,105 @@
+/* core.utilities.css
+ * Bottoni, card, utilities layout / testo
+ */
+
+/* Bottoni */
+.sc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sc-space-2);
+  padding: 0.5rem 1rem;
+  border-radius: var(--sc-radius-full);
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+}
+.sc-btn-primary {
+  background-color: var(--sc-color-primary);
+  color: #ffffff;
+}
+.sc-btn-primary:hover,
+.sc-btn-primary:focus-visible {
+  filter: brightness(1.05);
+}
+.sc-btn-ghost {
+  background-color: transparent;
+  border-color: var(--sc-color-border);
+  color: var(--sc-color-text);
+}
+.sc-btn-ghost:hover,
+.sc-btn-ghost:focus-visible {
+  background-color: var(--sc-color-primary-soft);
+}
+
+/* Badge / tag */
+.sc-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--sc-radius-full);
+  font-size: 0.75rem;
+  background-color: var(--sc-color-surface-alt);
+  color: var(--sc-color-muted);
+}
+
+/* Card generica */
+.sc-card {
+  background-color: var(--sc-color-surface);
+  border-radius: var(--sc-radius-lg);
+  padding: var(--sc-space-4);
+  box-shadow: var(--sc-shadow-sm);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+/* Layout utils */
+.sc-stack { display: flex; flex-direction: column; gap: var(--sc-space-3); }
+.sc-stack-lg { display: flex; flex-direction: column; gap: var(--sc-space-6); }
+
+.sc-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sc-space-2);
+}
+
+/* Grid semplice */
+.sc-grid-2 {
+  display: grid;
+  gap: var(--sc-space-4);
+}
+.sc-grid-3 {
+  display: grid;
+  gap: var(--sc-space-4);
+}
+@media (min-width: 768px) {
+  .sc-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sc-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Testo */
+.sc-text-center { text-align: center; }
+.sc-text-right { text-align: right; }
+.sc-muted { color: var(--sc-color-muted); }
+
+/* Stato / alert */
+.sc-alert {
+  border-radius: var(--sc-radius-md);
+  padding: var(--sc-space-3);
+  border: 1px solid var(--sc-color-border);
+  font-size: 0.9rem;
+}
+.sc-alert-info {
+  background-color: var(--sc-color-primary-soft);
+}
+.sc-alert-danger {
+  background-color: rgba(248, 113, 113, 0.08);
+  border-color: rgba(248, 113, 113, 0.5);
+  color: var(--sc-color-danger);
+}
