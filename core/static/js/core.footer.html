@@ -1,0 +1,24 @@
+<!-- core.footer.html -->
+<footer class="sc-footer" role="contentinfo">
+  <div class="sc-container sc-footer-inner">
+    <div class="sc-stack-sm">
+      <div>
+        &copy; <span id="sc-year"></span> BrandName. Tutti i diritti
+        riservati.
+      </div>
+      <div class="sc-inline sc-muted">
+        <a href="/privacy/">Privacy</a>
+        <span>·</span>
+        <a href="/cookies/">Cookie</a>
+        <span>·</span>
+        <a href="/contatti/">Contatti</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var el = document.getElementById("sc-year");
+      if (el) el.textContent = new Date().getFullYear();
+    });
+  </script>
+</footer>
