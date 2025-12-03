@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="auto">
+<head>
+  <!-- include core head -->
+  <!--#include virtual="/core/includes/core.head.html" -->
+  <title>Core template demo</title>
+  <meta name="description" content="Demo del core HTML/CSS/JS riusabile.">
+</head>
+<body class="sc-body">
+  <a class="sc-skip-link" href="#main-content">Salta al contenuto principale</a>
+
+  <!-- include header -->
+  <!--#include virtual="/core/includes/core.header.html" -->
+
+  <main id="main-content" class="sc-main">
+    <section class="sc-section">
+      <div class="sc-container sc-stack-lg">
+        <header class="sc-stack-sm sc-text-center">
+          <h1 class="sc-page-title">Core web template</h1>
+          <p class="sc-muted">
+            Questa è una demo del core riusabile (layout, tema, nav, componenti).
+          </p>
+          <div class="sc-inline sc-text-center" style="justify-content: center;">
+            <a class="sc-btn sc-btn-primary" href="#">Call to action</a>
+            <button class="sc-btn sc-btn-ghost" type="button" data-sc-theme-toggle>
+              Cambia tema
+            </button>
+          </div>
+        </header>
+
+        <div class="sc-grid-2">
+          <article class="sc-card sc-stack-sm">
+            <h2>Layout</h2>
+            <p>Container, header sticky, footer e griglie base già pronti.</p>
+          </article>
+          <article class="sc-card sc-stack-sm">
+            <h2>Tema</h2>
+            <p>Modalità auto/dark/light con variabili CSS e toggle utente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- include footer -->
+  <!--#include virtual="/core/includes/core.footer.html" -->
+
+  <script src="/core/static/js/core.site.js" defer></script>
+  <script src="/core/static/js/core.theme.js" defer></script>
+  <script src="/core/static/js/core.nav.js" defer></script>
+</body>
+</html>
