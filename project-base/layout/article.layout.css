@@ -1,0 +1,28 @@
+/* Layout specifico per pagina articolo */
+
+.article-layout {
+  max-width: 960px;
+}
+
+.article-header {
+  margin-bottom: var(--sc-space-6);
+}
+
+.article-title {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+}
+
+.article-meta {
+  font-size: 0.9rem;
+}
+
+.article-grid {
+  align-items: flex-start;
+}
+
+/* Colonne: 2/1 su desktop, colonna singola su mobile */
+@media (min-width: 900px) {
+  .article-grid {
+    grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
+  }
+}

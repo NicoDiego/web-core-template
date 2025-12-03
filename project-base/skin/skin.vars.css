@@ -1,0 +1,17 @@
+/* Override palette/base per un progetto specifico */
+
+:root {
+  --sc-color-primary: #2563eb;        /* blu più deciso */
+  --sc-color-primary-soft: #dbeafe;
+  --sc-color-bg: #f9fafb;
+  --sc-color-bg-soft: #f3f4f6;
+  --sc-color-heading: #0f172a;
+  --sc-color-text: #111827;
+}
+
+/* Tema scuro per questo progetto (opzionale, leggermente diverso dal core) */
+:root[data-theme="dark"],
+:root[data-theme="auto"][data-theme-mode="dark"] {
+  --sc-color-primary: #60a5fa;
+  --sc-color-primary-soft: #1e293b;
+}

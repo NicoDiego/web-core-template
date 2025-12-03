@@ -1,0 +1,35 @@
+/* Layout specifico per la home del project-base */
+
+.home-hero {
+  padding-top: var(--sc-space-10);
+  padding-bottom: var(--sc-space-8);
+}
+
+.home-hero-header {
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+.home-hero-title {
+  font-size: clamp(2.1rem, 4vw, 2.7rem);
+}
+
+.home-hero-subtitle {
+  font-size: 1rem;
+}
+
+.home-feature-grid {
+  margin-top: var(--sc-space-6);
+}
+
+.home-secondary {
+  padding-top: var(--sc-space-6);
+  border-top: 1px solid var(--sc-color-border);
+}
+
+/* Mobile tweak */
+@media (max-width: 640px) {
+  .home-hero {
+    padding-top: var(--sc-space-8);
+  }
+}

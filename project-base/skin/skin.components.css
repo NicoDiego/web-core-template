@@ -1,0 +1,21 @@
+/* Dettagli estetici extra per il progetto (bottoni, card, ecc.) */
+
+.sc-card {
+  border-radius: 1rem;
+  box-shadow: var(--sc-shadow-md);
+}
+
+.sc-btn-primary {
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.home-hero {
+  background: radial-gradient(circle at top left, #dbeafe 0, transparent 55%),
+              radial-gradient(circle at bottom right, #fef9c3 0, transparent 55%);
+}
+
+.article-sidebar .sc-card {
+  position: sticky;
+  top: 4.5rem;
+}
